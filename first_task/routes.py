@@ -1,9 +1,11 @@
+from datetime import datetime
+
+from flask import render_template, request, jsonify, flash
+
 from app import app, db
-from flask import render_template, request, jsonify
 from forms import TicketForm
 from models import Ticket
 from validators import validate_new_ticket_request
-from datetime import datetime
 
 
 def create_new_ticket(number, date, time):
@@ -24,4 +26,5 @@ def general_page():
         ticket_form = TicketForm()
         if ticket_form.validate_on_submit():
             create_new_ticket(number=ticket_form.number.data, date=ticket_form.date.data, time=ticket_form.time.data)
+            flash('Ticket create')
     return render_template('ticket-form.html', form=ticket_form)

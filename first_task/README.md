@@ -14,16 +14,16 @@
 ### Результат
 Реализована web-форма и api для создания записей о билетах.
 Переменные окружения необходимые для запуска:  
-**DATABASE_URL** в формате 'posgresql://login:password@host/dbname' ***ИЛИ***:
+**DATABASE_URL** в формате 'postgresql://login:password@host/dbname' ***ИЛИ***:
 1. **PSQL_LOGIN** - логин пользователя postgresql
 2. **PSQL_PASS** - пароль пользователя postgresql
 3. **PSQL_HOST** - хост пользователя postgresql (по умолчанию localhost)
 4. **TICKET_DB** - имя базы данных для хранения информации о билетах
 
-Скрипт для быстрого развертывания и запуска:  
+Установка:  
 ```
 git clone https://github.com/gwindblaids/DRONESELFIE.git
-cd first_task
+cd DRONESELFIE/first_task
 *задаем значение переменным окружения. К примеру:*
 export PSQL_LOGIN='ed'
 python3 -m venv ed-tickets

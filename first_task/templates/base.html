@@ -23,6 +23,8 @@
             crossorigin="anonymous"></script>
     <!-- END CDN -->
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 
 </head>
 
@@ -37,7 +39,7 @@
                             <img src="{{ url_for('static', filename='images/info-black.png') }}" class="rounded mr-2"
                                  height='40px'
                                  width='40px' alt="info">
-                            <strong class="mr-auto">Message</strong>
+                            <strong class="mr-auto">Info</strong>
                             <small>Now</small>
                             <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
